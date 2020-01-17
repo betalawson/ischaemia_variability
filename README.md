@@ -14,19 +14,19 @@ Data is stored in the following MATLAB data files:
 **main_effect_data.mat:**                Calculated main effects. To understand format, check FIGURE_MainEffectPlots  
 **main_effect_data_shortrange.mat:**     Calculated main effects over a shorter range.  
 
-#####Additional raw data is included in the .txt files:
+####Additional raw data is included in the .txt files:
 
 **param_SS_1000configs.txt:**         Steady state data obtained for the 1000 parameter configurations  
 **bifurcation1D-table.txt:**          Information from bifurcating fibre simulations
 
-#####Metrics stored are:
+####Metrics stored are:
 
 **1D:** [ APD, CV, WL, V_rest, V_peak, APA, block_level, delay1, delay2, delay3, delay4, block_susceptibility ]  
 (note that delays are post subtraction of delay1)
 
 **2D:** [ wave_disorder, blockRatio, blockCount, APDmean, APDstd, WLmean, WLstd, DF, F_std, multiActRatio, multiActCount ]
 
-#####Classifications ("flags") are:
+####Classifications ("flags") are:
 
 **-1:**       Non-propagating  
 ** 0:**       Propagates, no type of re-entry  
@@ -36,7 +36,7 @@ Data is stored in the following MATLAB data files:
 
 ----------------------------------------------------------------
 
-#####Key functions are:
+####Key functions are:
 
 **createFibreProblem:**      Creates the 1D Fibre problem in a format used by the simulator  
 **findSteadyState:**         Finds steady state configuration (and checks if excitation propagates at all) for a given problem (including parameters)  
