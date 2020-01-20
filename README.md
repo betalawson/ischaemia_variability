@@ -29,10 +29,10 @@ Data is stored in the following MATLAB data files:
 ### Classifications ("flags") are:
 
 **-1:**       Non-propagating  
-** 0:**       Propagates, no type of re-entry  
-** 1:**       At least 0.1% of sites were activated more than once  
-** 2:**       At least 2.5% of sites were activated more than once, but re-entry doesn't persist  
-** 3:**       As per 2, but re-entry persisted for the full t = 1000ms
+**0:**       Propagates, no type of re-entry  
+**1:**       At least 0.1% of sites were activated more than once  
+**2:**       At least 2.5% of sites were activated more than once, but re-entry doesn't persist  
+**3:**       As per 2, but re-entry persisted for the full t = 1000ms
 
 ----------------------------------------------------------------
 
