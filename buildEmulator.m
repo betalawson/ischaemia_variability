@@ -7,6 +7,8 @@ function emulator = buildEmulator(X, Y, GP_options)
 % process regression. This version of the file simply calls MATLAB's built
 % in Gaussian process fitting routine.
 
+% Read out the number of outputs
+d = size(Y,2);
       
 % Read out the desired covariance function and express it in
 % MATLAB's desired format
@@ -34,6 +36,6 @@ fprintf('Done! \n');
       
 %%% STORE ALL REQUIRED VARIABLES IN THE emulator STRUCT
 emulator.covFun = covFun;
-emulator.d = d;
 emulator.Y_GPs = Y_GPs;
 emulator.X = X;
+emulator.d = d;

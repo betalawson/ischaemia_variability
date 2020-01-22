@@ -1,4 +1,4 @@
-function [code_options, SVM_options, GP_options, isomap_options] = DEFINEOptions
+function [code_options, SVM_options, GP_options] = DEFINEOptions
 
 % This is the function used by the user to change options of the relevant
 % codes

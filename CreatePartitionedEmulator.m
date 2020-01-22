@@ -11,7 +11,7 @@ function [PartitionedEmulator] = CreatePartitionedEmulator(train_data, test_data
 %%%%% SETUP
 
 % Load in the options
-[code_options, SVM_options, GP_options, isomap_options] = DEFINEOptions;
+[code_options, SVM_options, GP_options] = DEFINEOptions;
 
 % Extract contents of provided data
 train_X = train_data.X;
@@ -81,7 +81,7 @@ for i = 0:max(train_C)
     end
            
     % Construct an emulator for this classification
-    PartitionedEmulator.emulatorsByClass{i+1} = buildEmulator(train_X_by_class{i+1}, train_Y_by_class{i+1}, 'none', 0, 'MATLAB', GP_options, isomap_options);
+    PartitionedEmulator.emulatorsByClass{i+1} = buildEmulator(train_X_by_class{i+1}, train_Y_by_class{i+1}, GP_options);
     
     % Now, gather the test data that will use this emulator
     if ~strcmp(classification_function,'predict')
